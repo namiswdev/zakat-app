@@ -1,0 +1,149 @@
+<html>
+
+<head>
+
+<title>ZAKAT</title>
+
+<link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<script type="text/javascript">
+  var IdealTimeOut = 60; //60 seconds
+  var idleSecondsTimer = null;
+  var idleSecondsCounter = 0;
+  document.onclick = function () { idleSecondsCounter = 0; };
+  document.onmousemove = function () { idleSecondsCounter = 0; };
+  document.onkeypress = function () { idleSecondsCounter = 0; };
+  document.onscroll = function () { idleSecondsCounter = 0; };
+  idleSecondsTimer = window.setInterval(CheckIdleTime, 1000);
+
+function CheckIdleTime() 
+{
+    idleSecondsCounter++;
+    var oPanel = document.getElementById("timeOut");
+    if (oPanel) 
+    {
+        oPanel.innerHTML = (IdealTimeOut - idleSecondsCounter);
+    }
+      
+    if (idleSecondsCounter >= IdealTimeOut) 
+    {
+        window.clearInterval(idleSecondsTimer);
+        alert("Your Session has expired, please login again.");
+        window.location = "indexAdmin.php";
+    }
+}
+</script>
+
+<body background='img/background.jpg'>
+
+<div class="header">
+  <a class="active" href=indexAdmin.html class="logo"><img src='img/logo.png' width=90 pixel" height="90 pixel"></a>
+  <div class="header-right">
+	  <a class="active" href="indexAdmin.html">Home</a>
+      <a href="dashboardAdmin.html">Dashboard</a>
+	  <a href="index.html">Logout</a>
+  </div>
+</div>
+
+<hr>
+
+<br>
+<br>
+
+<center><img src='img/banneradmin.JPG' width="1080 pixel"></center>
+
+<br>
+<br>
+
+<fieldset>
+<legend align="center"><font face="Futura" size="6" color="white"> - </font></legend>
+  
+<div class="column">
+<table border="1" align="center" bgcolor="white" width="300" height="50">
+<tr>
+    <td><div class="nav-links b">
+        <center><a href="scheduleAdmin.php">Pay Information</a></center>
+    </div>
+    </td>
+</tr>
+</table>
+</div>
+  
+<div class="column">
+<table border="1" align="center" bgcolor="white" width="300" height="50">
+<tr>
+    <td><div class="nav-links b">
+        <center><a href="admin.php">List of Users</a></center>
+    </div>
+    </td>
+</tr>
+</table>
+</div>
+  
+</hl></font>
+</center>
+  
+</fieldset>
+
+<br>
+</br>
+<br>
+</br>
+
+<hr>
+
+<div class="footer">
+<center>
+<font color='white'><pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+</div>
+
+<div class="footer">
+<center>
+<pre>
+
+<a href=copyrightAdmin.html><img src='img/logo.png' width=150 pixel" height=150 pixel"></a>
+
+<a href=copyrightAdmin.html>Disclaimer & Copyright</a>
+</pre></hl></font>
+</center>
+</div>
+
+<div class="footer">
+  <center>
+  <font color='white'><pre>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </font>
+  </center>
+  </div>
+
+</body>
+
+</head>
+
+</html>
